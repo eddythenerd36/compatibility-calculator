@@ -348,7 +348,7 @@
 	"1812 Overture Cannon:Harpsichord": { "percentage": 346, "description": "1812 o cannon harpsichord placeholder text"},
 	"1812 Overture Cannon:Other Keyboard": { "percentage": 347, "description": "1812 o cannon other keyboard placeholder text"},
 	"1812 Overture Cannon:Guitar": { "percentage": 348, "description": "1812 o cannon guitar placeholder text"},
-	"1812 Overture Cannon:Other Plucked Strings": { "percentage": 349 "description": "1812 o cannon o p strings placeholder text"},
+	"1812 Overture Cannon:Other Plucked Strings": { "percentage": 349, "description": "1812 o cannon o p strings placeholder text"},
 	"Mahler Hammer:Mahler Hammer": { "percentage": 350, "description": "mahler hammer mahler hammer placeholder text"},
 	"Mahler Hammer:Piano": { "percentage": 351, "description": "mahler hammer piano placeholder text"},
 	"Mahler Hammer:Organ": { "percentage": 352, "description": "mahler hammer organ placeholder text"},
