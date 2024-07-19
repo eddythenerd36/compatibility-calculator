@@ -89,3 +89,8 @@ function calculateCompatibility() {
         })
         .catch(error => console.error('Error fetching data:', error));
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const resultElement = document.getElementById('result');
+    resultElement.classList.add('hidden'); // Ensure hidden on load
+});
