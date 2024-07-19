@@ -1,18 +1,23 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Load instruments and populate dropdowns
+    console.log("Document loaded. Fetching data...");
+    
     fetch('data.txt')
-        .then(response => response.json())
+        .then(response => {
+            console.log("Response received:", response);
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log("Data fetched:", data);
             const instruments = new Set();
-            const compatibilityMatrix = data;
-
-            for (const key in compatibilityMatrix) {
+            for (const key in data) {
                 const [inst1, inst2] = key.split(':');
                 instruments.add(inst1);
                 instruments.add(inst2);
             }
 
-            // Populate dropdowns
             const select1 = document.getElementById('instrument1');
             const select2 = document.getElementById('instrument2');
             Array.from(instruments).forEach(inst => {
@@ -26,7 +31,8 @@ document.addEventListener("DOMContentLoaded", function() {
                 option2.text = inst;
                 select2.add(option2);
             });
-        });
+        })
+        .catch(error => console.error('Error fetching data:', error));
 });
 
 function calculateCompatibility() {
@@ -37,15 +43,21 @@ function calculateCompatibility() {
         : `${inst2}:${inst1}`;
 
     fetch('data.txt')
-        .then(response => response.json())
+        .then(response => {
+            console.log("Response received for compatibility check:", response);
+            if (!response.ok) {
+                throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(data => {
+            console.log("Data for compatibility:", data);
             const result = data[key] || { percentage: 0, description: "No compatibility data available." };
 
-            // Display result
             document.getElementById('result').innerHTML = `
                 <p><strong>Compatibility:</strong> ${result.percentage}%</p>
                 <p><strong>Description:</strong> ${result.description}</p>
             `;
-        });
+        })
+        .catch(error => console.error('Error fetching data:', error));
 }
-
