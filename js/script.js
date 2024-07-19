@@ -48,12 +48,13 @@ function populateDropdowns(data) {
 function calculateCompatibility() {
     const inst1 = document.getElementById('instrument1').value;
     const inst2 = document.getElementById('instrument2').value;
-    const key = inst1 < inst2
-        ? `${inst1}:${inst2}`
-        : `${inst2}:${inst1}`;
+
+    // Construct both possible keys
+    const key1 = `${inst1}:${inst2}`;
+    const key2 = `${inst2}:${inst1}`;
 
     console.log("Selected instruments:", inst1, inst2);
-    console.log("Constructed key:", key);
+    console.log("Constructed keys:", key1, key2);
 
     fetch('data.txt')
         .then(response => {
@@ -68,7 +69,8 @@ function calculateCompatibility() {
             try {
                 const data = JSON.parse(text); // Parse the text as JSON
                 console.log("Data for compatibility:", data); // Log parsed data
-                const result = data[key] || { percentage: 0, description: "No compatibility data available." };
+                // Check both possible keys
+                const result = data[key1] || data[key2] || { percentage: 0, description: "No compatibility data available." };
 
                 console.log("Result for key:", result); // Log result
 
