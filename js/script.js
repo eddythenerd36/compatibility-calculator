@@ -74,10 +74,14 @@ function calculateCompatibility() {
 
                 console.log("Result for key:", result); // Log result
 
-                document.getElementById('result').innerHTML = `
+                const resultElement = document.getElementById('result');
+                resultElement.innerHTML = `
                     <p><strong>Compatibility:</strong> ${result.percentage}%</p>
                     <p><strong>Description:</strong> ${result.description}</p>
                 `;
+
+                // Show the result div
+                resultElement.classList.add('show');
             } catch (error) {
                 console.error("JSON parsing error:", error);
             }
