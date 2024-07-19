@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrument Compatibility Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <h1>Instrument Compatibility Calculator</h1>
+    <form id="compatibilityForm">
+        <label for="instrument1">Select Instrument 1:</label>
+        <select id="instrument1" name="instrument1">
+            <!-- Options will be dynamically added here -->
+        </select>
+        <br>
+        <label for="instrument2">Select Instrument 2:</label>
+        <select id="instrument2" name="instrument2">
+            <!-- Options will be dynamically added here -->
+        </select>
+        <br>
+        <button type="button" onclick="calculateCompatibility()">Check Compatibility</button>
+    </form>
+    <div id="result">
+        <!-- Compatibility result will be displayed here -->
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
+
