@@ -33,7 +33,7 @@
 	"Viola:Piccolo": { "percentage": 31, "description": "viola piccolo placeholder text"},
 	"Viola:Flute": { "percentage": 32, "description": "viola flute placeholder text"},
 	"Viola:Oboe": { "percentage": 33, "description": "viola oboe placeholder text"},
-	"Viola:Clarinet": { "percentage": 34, "description": "viola clarinet placeholder text"},
+	"Viola:Clarinet": { "percentage": 18, "description": "You'll never be able to get over the fact that you play each others' Brahms sonatas. (Was it a clarinet or a viola sonata, anyway?) At least you're both used to being the black sheep of your instrument families."},
 	"Viola:Bassoon": { "percentage": 35, "description": "viola bassoon placeholder text"},
 	"Viola:Saxophone": { "percentage": 36, "description": "viola saxophone placeholder text"},
 	"Viola:French Horn": { "percentage": 37, "description": "viola french horn placeholder text"},
