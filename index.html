@@ -9,19 +9,24 @@
 </head>
 <body>
     <h1>Musician Compatibility Calculator</h1>
-    <h3>Will it ever work out with the violist of your dreams? Or are you destined to remain as single as a drummer?</h3>
+    <br>
+    <b>Will it ever work out with the violist of your dreams? Or are you destined to remain as single as a drummer?</b>
     <form id="compatibilityForm">
+        <br>
+        <br>
         <label for="instrument1">Select Instrument 1:</label>
-        <select id="instrument1" name="instrument1">
+        <select id="instrument1" name="instrument1" class="form-control">
             <!-- Options will be dynamically added here -->
         </select>
+        <br>
         <br>
         <label for="instrument2">Select Instrument 2:</label>
-        <select id="instrument2" name="instrument2">
+        <select id="instrument2" name="instrument2" class="form-control">
             <!-- Options will be dynamically added here -->
         </select>
         <br>
-        <button type="button" class="btn btn-success" onclick="calculateCompatibility()">Check Compatibility</button>
+        <br>
+        <button type="button" class="btn btn-outline-primary" onclick="calculateCompatibility()">Check Compatibility</button>
     </form>
     <div id="result">
         <!-- Compatibility result will be displayed here -->
