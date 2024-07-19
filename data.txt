@@ -376,5 +376,5 @@
 	"Other Keyboard:Other Plucked Strings": { "percentage": 374, "description": "other keyboard o p strings placeholder text"},
 	"Guitar:Guitar": { "percentage": 375, "description": "guitar guitar placeholder text"},
 	"Guitar:Other Plucked Strings": { "percentage": 376, "description": "guitar other plucked strings placeholder text"},
-	"Other Plucked Strings:Other Plucked Strings": { "percentage": 377, "description": "o p strings o p strings placeholder text"},
+	"Other Plucked Strings:Other Plucked Strings": { "percentage": 377, "description": "o p strings o p strings placeholder text"}
 }
