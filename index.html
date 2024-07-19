@@ -3,11 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Instrument Compatibility Calculator</title>
+    <title>Musician Compatibility Calculator</title>
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>Instrument Compatibility Calculator</h1>
+    <h1>Musician Compatibility Calculator</h1>
+    <h3>Will it ever work out with the violist of your dreams? Or are you destined to remain as single as a drummer?</h3>
     <form id="compatibilityForm">
         <label for="instrument1">Select Instrument 1:</label>
         <select id="instrument1" name="instrument1">
@@ -19,11 +21,14 @@
             <!-- Options will be dynamically added here -->
         </select>
         <br>
-        <button type="button" onclick="calculateCompatibility()">Check Compatibility</button>
+        <button type="button" class="btn btn-success" onclick="calculateCompatibility()">Check Compatibility</button>
     </form>
     <div id="result">
         <!-- Compatibility result will be displayed here -->
     </div>
+    <script src="https://code.jqueyr.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/boostrap.min.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>
