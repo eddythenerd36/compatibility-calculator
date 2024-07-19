@@ -75,6 +75,7 @@ function calculateCompatibility() {
                 console.log("Result for key:", result); // Log result
 
                 const resultElement = document.getElementById('result');
+                console.log(resultElement); // Logs the element, in theory
                 resultElement.innerHTML = `
                     <p><strong>Compatibility:</strong> ${result.percentage}%</p>
                     <p><strong>Description:</strong> ${result.description}</p>
