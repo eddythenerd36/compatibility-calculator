@@ -55,12 +55,36 @@ label {
     color: #555;
 }
 
-/* result {
+result {
     text-align: center;
     margin-top: 20px;
     padding: 10px;
     border: 1px solid #007bff;
     border-radius: 4px;
-    background-color: #e9f7fd;
-} */
+    /* background-color: #e9f7fd; */
+    width: 90%; /* Default width for small screens */
+}
 
+@media (min-width: 576px) {
+    #result {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    #result {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    #result {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    #result {
+        max-width: 1140px;
+    }
+}
