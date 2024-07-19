@@ -1,39 +1,49 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Document loaded. Fetching data...");
-    
+
     fetch('data.txt')
         .then(response => {
             console.log("Response received:", response);
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
-            return response.json();
+            return response.text(); // Get response as text
         })
-        .then(data => {
-            console.log("Data fetched:", data);
-            const instruments = new Set();
-            for (const key in data) {
-                const [inst1, inst2] = key.split(':');
-                instruments.add(inst1);
-                instruments.add(inst2);
+        .then(text => {
+            console.log("Response text:", text); // Log raw text
+            try {
+                const data = JSON.parse(text); // Parse the text as JSON
+                console.log("Data fetched:", data); // Log parsed data
+                populateDropdowns(data); // Populate dropdowns with data
+            } catch (error) {
+                console.error("JSON parsing error:", error);
             }
-
-            const select1 = document.getElementById('instrument1');
-            const select2 = document.getElementById('instrument2');
-            Array.from(instruments).forEach(inst => {
-                const option1 = document.createElement('option');
-                option1.value = inst;
-                option1.text = inst;
-                select1.add(option1);
-
-                const option2 = document.createElement('option');
-                option2.value = inst;
-                option2.text = inst;
-                select2.add(option2);
-            });
         })
         .catch(error => console.error('Error fetching data:', error));
 });
+
+function populateDropdowns(data) {
+    const instruments = new Set();
+    for (const key in data) {
+        const [inst1, inst2] = key.split(':');
+        instruments.add(inst1);
+        instruments.add(inst2);
+    }
+
+    const select1 = document.getElementById('instrument1');
+    const select2 = document.getElementById('instrument2');
+    Array.from(instruments).forEach(inst => {
+        const option1 = document.createElement('option');
+        option1.value = inst;
+        option1.text = inst;
+        select1.add(option1);
+
+        const option2 = document.createElement('option');
+        option2.value = inst;
+        option2.text = inst;
+        select2.add(option2);
+    });
+}
 
 function calculateCompatibility() {
     const inst1 = document.getElementById('instrument1').value;
@@ -47,23 +57,28 @@ function calculateCompatibility() {
 
     fetch('data.txt')
         .then(response => {
+            console.log("Response received for compatibility check:", response);
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
-            return response.text(); // Get response as text first
+            return response.text(); // Get response as text
         })
         .then(text => {
-            console.log("Response text for compatibility check:", text);
-            const data = JSON.parse(text); // Parse the text as JSON
-            console.log("Data for compatibility:", data);
-            const result = data[key] || { percentage: 0, description: "No compatibility data available." };
+            console.log("Response text for compatibility check:", text); // Log raw text
+            try {
+                const data = JSON.parse(text); // Parse the text as JSON
+                console.log("Data for compatibility:", data); // Log parsed data
+                const result = data[key] || { percentage: 0, description: "No compatibility data available." };
 
-            console.log("Result for key:", result);
+                console.log("Result for key:", result); // Log result
 
-            document.getElementById('result').innerHTML = `
-                <p><strong>Compatibility:</strong> ${result.percentage}%</p>
-                <p><strong>Description:</strong> ${result.description}</p>
-            `;
+                document.getElementById('result').innerHTML = `
+                    <p><strong>Compatibility:</strong> ${result.percentage}%</p>
+                    <p><strong>Description:</strong> ${result.description}</p>
+                `;
+            } catch (error) {
+                console.error("JSON parsing error:", error);
+            }
         })
         .catch(error => console.error('Error fetching data:', error));
 }
