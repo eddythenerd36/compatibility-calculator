@@ -1,6 +1,19 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: Helvetica, sans-serif;
+    background-color: #f4f4f4;
     margin: 20px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    background-coor: white;
+    padding: 20px;
+    border-radius: 4px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 h1 {
@@ -36,8 +49,18 @@ form {
     margin-bottom: 20px;
 }
 
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
 #result {
     text-align: center;
     margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #007bff;
+    border-radius: 4px;
+    background-color: #e9f7fd;
 }
 
