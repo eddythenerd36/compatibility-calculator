@@ -42,17 +42,23 @@ function calculateCompatibility() {
         ? `${inst1}:${inst2}`
         : `${inst2}:${inst1}`;
 
+    console.log("Selected instruments:", inst1, inst2);
+    console.log("Constructed key:", key);
+
     fetch('data.txt')
         .then(response => {
-            console.log("Response received for compatibility check:", response);
             if (!response.ok) {
                 throw new Error('Network response was not ok ' + response.statusText);
             }
-            return response.json();
+            return response.text(); // Get response as text first
         })
-        .then(data => {
+        .then(text => {
+            console.log("Response text for compatibility check:", text);
+            const data = JSON.parse(text); // Parse the text as JSON
             console.log("Data for compatibility:", data);
             const result = data[key] || { percentage: 0, description: "No compatibility data available." };
+
+            console.log("Result for key:", result);
 
             document.getElementById('result').innerHTML = `
                 <p><strong>Compatibility:</strong> ${result.percentage}%</p>
