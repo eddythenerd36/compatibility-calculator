@@ -1,6 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
     console.log("Document loaded. Fetching data...");
 
+    const resultElement = document.getElementById('result');
+    resultElement.classList.remove('show');
+    
     fetch('data.txt')
         .then(response => {
             console.log("Response received:", response);
@@ -44,6 +47,8 @@ function populateDropdowns(data) {
         select2.add(option2);
     });
 }
+
+
 
 function calculateCompatibility() {
     const inst1 = document.getElementById('instrument1').value;
