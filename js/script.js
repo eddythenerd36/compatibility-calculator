@@ -82,8 +82,12 @@ function calculateCompatibility() {
                 `;
 
                 // Show the result div
+                console.log("Before toggling classes:", resultElement.classList);
+
                 resultElement.classList.remove('hidden');
                 resultElement.classList.add('show');
+
+                console.log("After toggling classes:", resultElement.classList);
             } catch (error) {
                 console.error("JSON parsing error:", error);
             }
