@@ -33,14 +33,21 @@ label {
 
 #result {
     display: none; /* Hide the result initially */
-    text-align: center;
-    padding: 10px;
+    background-color: #e9f7fd;
     border: 1px solid #007bff;
     border-radius: 4px;
-    background-color: #e9f7fd;
-    width: 80%; /* Default width for small screens */
-    margin-left: auto;
-    margin-right: auto;
+    padding: 10px;
+    margin-top: 20px;
+    text-align: center;
+    width: 90%; /* Default width for small screens */
+    margin-left: 20px;
+    margin-right: 20px;
+    box-sizing: border-box; /* Includes padding/border in the element's total width/height */
+    line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 @media (min-width: 576px) {
