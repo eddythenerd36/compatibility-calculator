@@ -42,12 +42,13 @@ label {
     width: 90%; /* Default width for small screens */
     margin-left: 20px;
     margin-right: 20px;
-    box-sizing: border-box; /* Includes padding/border in the element's total width/height */
+    /* 
+    box-sizing: border-box; Includes padding/border in the element's total width/height 
     line-height: 1.5;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 @media (min-width: 576px) {
@@ -74,6 +75,6 @@ label {
     }
 }
 
-#result.show {
+.show {
     display: block !important; /* Show the result when this class is added */
 }
