@@ -1,8 +1,8 @@
 {
-	"Violin:Violin": { "percentage": 0, "description": "violin violin placeholder text"},
-	"Violin:Viola": { "percentage": 1, "description": "violin viola placeholder text"},
-	"Violin:Cello": { "percentage": 2, "description": "violin cello placeholder text"},
-	"Violin:Bass": { "percentage": 3, "description": "violin bass placeholder text"},
+	"Violin:Violin": { "percentage": 85, "description": "Two violinists will always be able to relate to the pain of trying to master the most difficult repertoire in classical music. Just don't argue over who plays first and who plays second in a duet."},
+	"Violin:Viola": { "percentage": 53, "description": "The violinist brings the sparkle and the viola does... whatever a violist does. Your instruments complement each other well, but expect the violist in the relationship to constantly remind the other that size DOES matter. "},
+	"Violin:Cello": { "percentage": 79, "description": "The cello's deep resonance helps to bring out the violin's brightness, and as the two most popular string instruments you'll both be the stars of the show. As long as you can set aside the debate between Bach's sonatas/partitas and suites, you'll fit together like puzzle pieces."},
+	"Violin:Bass": { "percentage": 62, "description": "It's an intriguing pair that could work, but sitting on the opposite sides of the orchestra doesn't help matters. (Of course, it's the violists who get in between the two of you.)"},
 	"Violin:Harp": { "percentage": 4, "description": "violin harp placeholder text"},
 	"Violin:Piccolo": { "percentage": 5, "description": "violin piccolo placeholder text"},
 	"Violin:Flute": { "percentage": 6, "description": "violin flute placeholder text"},
