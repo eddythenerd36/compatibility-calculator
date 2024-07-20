@@ -74,6 +74,6 @@ label {
     }
 }
 
-.show {
-    display: flex !important; /* Show the result when this class is added */
+#result.show {
+    display: block !important; /* Show the result when this class is added */
 }
