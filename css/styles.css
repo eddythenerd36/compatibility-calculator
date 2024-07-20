@@ -75,5 +75,5 @@ label {
 }
 
 .show {
-    display: block !important; /* Show the result when this class is added */
+    display: flex !important; /* Show the result when this class is added */
 }
