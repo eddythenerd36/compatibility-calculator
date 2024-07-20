@@ -69,5 +69,5 @@ label {
 }
 
 .show {
-    display: block; /* Show the result when this class is added */
+    display: block !important; /* Show the result when this class is added */
 }
