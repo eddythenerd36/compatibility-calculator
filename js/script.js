@@ -75,19 +75,19 @@ function calculateCompatibility() {
                 console.log("Result for key:", result); // Log result
 
                 const resultElement = document.getElementById('result');
-                console.log(resultElement); // Logs the element, in theory
+                if (resultElement) {
+                console.log("Result element:", resultElement);
+                console.log("Before toggling classes:", resultElement.classList);
                 resultElement.innerHTML = `
                     <p><strong>Compatibility:</strong> ${result.percentage}%</p>
                     <p><strong>Description:</strong> ${result.description}</p>
                 `;
-
-                // Show the result div
-                console.log("Before toggling classes:", resultElement.classList);
-
                 resultElement.classList.remove('hidden');
                 resultElement.classList.add('show');
-
                 console.log("After toggling classes:", resultElement.classList);
+                } else {
+                    console.error("Result element not found");
+                }            
             } catch (error) {
                 console.error("JSON parsing error:", error);
             }
