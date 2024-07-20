@@ -34,8 +34,6 @@ label {
 #result {
     display: none; /* Hide the result initially */
     text-align: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
     padding: 10px;
     border: 1px solid #007bff;
     border-radius: 4px;
